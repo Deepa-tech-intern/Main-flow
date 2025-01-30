@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; /* Align items to the opposite ends */
+}
+
+.navbar {
+  background-color: #ffcc00; /* Ice cream shop color */
+  padding: 1rem;
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-brand img {
+  width: 150px;
+  height: auto;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex; /* Ensure items are in a single line */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar-nav li {
+  margin-right: 20px; /* Space between items */
+}
+
+.navbar-nav li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #222;
+  padding: 10px; /* Add padding for better click area */
+  transition: color 0.3s; /* Add transition for hover effect */
+}
+
+.nav-link:hover {
+  color: #ff6600; /* Change color on hover */
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.carousel-caption h1 {
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+.carousel-caption h3 {
+  font-size: 2em;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn.primary {
+  background-color: #ff6600;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid #222;
+  color: #222;
+}
+
+.jumbotron {
+  padding: 2rem;
+  background-color: #ffcc00;
+  text-align: center;
+}
+
+.welcome {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Menu Section */
+.menu-section {
+    text-align: center; /* Center the title */
+    padding: 2rem 0; /* Add padding for spacing */
+}
+
+.flavors-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: space-between; /* Align items with space between */
+    padding: 2rem 0; /* Add padding for spacing */
+}
+
+.column {
+    flex: 1 1 30%; /* Allow columns to grow and shrink, with a base width of 30% */
+    margin: 10px; /* Add margin for spacing between items */
+    background-color: #fff; /* White background for flavor boxes */
+    border: 1px solid #ddd; /* Light border around boxes */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside boxes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left; /* Align text to the left */
+}
+
+.column h3 {
+    margin-top: 0; /* Remove top margin for headings */
+}
+
+/* About Section */
+.two-columns {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.text-column {
+    width: 50%;
+    padding: 1rem;
+}
+
+.image-column {
+    width: 50%;
+}
+
+.image-column img {
+    width: 100%;
+}
+
+/* Connect Section */
+.connect {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social a {
+    font-size: 2em;
+    margin: 0 10px;
+    color: #222;
+}
+.flavor-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
+  align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color:#ffcc00;
+    color: #0e0101;
+    padding: 2rem 0;
+    text-align: center;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-bottom {
+  padding: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .three-columns, .two-columns, .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .column, .text-column, .image-column, .footer-section {
+      width: 80%;
+      margin-bottom: 1rem;
+  }
+
+  .carousel-caption h1 {
+      font-size: 3em;
+  }
+
+  .carousel-caption h3 {
+      font-size: 1.5em;
+  }
+}

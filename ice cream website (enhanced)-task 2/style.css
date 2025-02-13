@@ -1,0 +1,373 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffcc00;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  width: 150px;
+  height: auto;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #222;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff6600;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffcc00;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Submenu Styles */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show Submenu on Hover */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown Menu Links */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #222;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+      flex-direction: column;
+  }
+
+  .navbar-nav li {
+      margin-right: 0;
+  }
+
+  .dropdown-menu {
+      position: static;
+      width: 100%;
+  }
+
+  .dropdown-submenu .dropdown-menu {
+      left: 0;
+      margin-left: 1rem;
+  }
+}
+
+
+/* Adjustments for Responsive Design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .navbar-nav li {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .dropdown-menu {
+    position: static; /* Change position for mobile */
+    width: 100%; /* Full width */
+    opacity: 1; /* Ensure it's visible */
+    visibility: visible; /* Ensure it's visible */
+  }
+
+  .dropdown-submenu .dropdown-menu {
+    left: 0; /* Align nested dropdown to the left */
+    margin-left: 1rem; /* Add indentation for nested items */
+  }
+}
+/* Adjustments for Responsive Design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .navbar-nav li {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .dropdown-menu {
+    position: static; /* Change position for mobile */
+    width: 100%; /* Full width */
+  }
+
+  .dropdown-submenu .dropdown-menu {
+    left: 0; /* Align nested dropdown to the left */
+    margin-left: 1rem; /* Add indentation for nested items */
+  }
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.carousel-caption h1 {
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+.carousel-caption h3 {
+  font-size: 2em;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.btn.primary {
+  background-color: #ff6600;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid #222;
+  color: #222;
+}
+
+.btn.secondary:hover {
+  background-color: #222; /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Jumbotron Styles */
+.jumbotron {
+  padding: 2rem;
+  background-color: #ffcc00;
+  text-align: center;
+}
+
+/* Welcome Section Styles */
+.welcome {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Menu Section Styles */
+.menu-section {
+  text-align: center; /* Center the title */
+  padding: 2rem 0; /* Add padding for spacing */
+}
+
+.flavors-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  justify-content: space-between; /* Align items with space between */
+  padding: 2rem 0; /* Add padding for spacing */
+}
+
+.column {
+  flex: 1 1 30%; /* Allow columns to grow and shrink, with a base width of 30% */
+  margin: 10px; /* Add margin for spacing between items */
+  background-color: #fff; /* White background for flavor boxes */
+  border: 1px solid #ddd; /* Light border around boxes */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside boxes */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: left; /* Align text to the left */
+}
+
+.column h3 {
+  margin-top: 0; /* Remove top margin for headings */
+}
+
+.flavor-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
+}
+
+/* About Section Styles */
+.two-columns {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.text-column {
+  width: 50%;
+  padding: 1rem;
+}
+
+.image-column {
+  width: 50%;
+}
+
+.image-column img {
+  width: 100%;
+}
+
+/* Connect Section Styles */
+.connect {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.social a {
+  font-size: 2em;
+  margin: 0 10px;
+  color: #222;
+  transition: color 0.3s; /* Smooth transition */
+}
+
+.social a:hover {
+  color: #ff6600; /* Change color on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #ffcc00;
+  color: #0e0101;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-bottom {
+  padding: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .three-columns, .two-columns, .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column, .text-column, .image-column, .footer-section {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-caption h1 {
+    font-size: 3em;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.5em;
+  }
+}
